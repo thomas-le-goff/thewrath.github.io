@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thomas Le Goff</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 4rem 0;
+      padding: 0 2rem;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: #b5e0d3;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 2rem;
+      width: 20px;
+      height: 20px;
+      background: #b5e0d3;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-item-left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item-left::before {
+      right: -10px;
+    }
+
+    .timeline-item-right {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-item-right::before {
+      left: -10px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .timeline-item,
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        text-align: left;
+        left: 0 !important;
+        padding-left: 4rem;
+      }
+
+      .timeline-item::before {
+        left: -10px !important;
+        right: auto;
+      }
+
+      .timeline-line {
+        left: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="images/irl.jpeg" alt="Thomas Le Goff">
+      </figure>
+      <h1 class="title mt-4">Thomas Le Goff</h1>
+      <p class="subtitle">Software engineer | Game developer and runner on my free time</p>
+      <div class="buttons is-centered">
+        <a href="https://github.com/thewrath" class="button is-dark">GitHub</a>
+        <a href="https://www.linkedin.com/in/thomas-le-goff-372557235/" class="button is-info">LinkedIn</a>
+        <a href="mailto:thomaslegoffpro@gmail.com" class="button is-light">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">My projects</h2>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item timeline-item-right">
+          <h3 class="title is-4">Tanki</h3>
+          <p class="has-text-grey-light">2025</p>
+          <p class="tags">
+            <span class="tag">KaplayJS</span>
+            <span class="tag">Solo</span>
+            <span class="tag">Multiplayer</span>
+          </p>
+          <img class="image box mb-2 p-0" src="images/tanki.png" alt="Tanki">
+          <p>
+            Tank battle game online.
+          </p>
+        </div>
+
+        <div class="timeline-item timeline-item-left">
+          <h3 class="title is-4">Drifting trailer</h3>
+          <p class="has-text-grey-light">2023</p>
+          <p class="tags">
+            <span class="tag">Godot</span>
+            <span class="tag">Team</span>
+            <span class="tag">LD53</span>
+          </p>
+          <img class="box image mb-2 p-0" src="images/drifting_trailer.png" alt="Drifting trailer">
+          <p>
+            Take 5 minutes of your time to discover the fun and madness of drifting with a trailer, you will not regret
+            it!
+          </p>
+          <a href="https://martinboue.itch.io/drifting-trailer" class="button is-link is-small mt-2">Play</a>
+        </div>
+
+        <div class="timeline-item timeline-item-right">
+          <h3 class="title is-4">Is this your Order?</h3>
+          <p class="has-text-grey-light">2022</p>
+          <p class="tags">
+            <span class="tag">JS</span>
+            <span class="tag">Team</span>
+            <span class="tag">LD51</span>
+          </p>
+          <img class="image box mb-2 p-0" src="images/is_this_your_order.png" alt="Is this your order?">
+          <p>
+            You are a delivery man in a small town and suddenly... everyone is hungry! You have to deliver to the
+            villagers as quickly as possible thanks to clues given by the restaurants. Get to know the locals to deliver
+            faster.
+          </p>
+          <a href="https://martinboue.itch.io/is-this-your-order" class="button is-link is-small mt-2">Play</a>
+        </div>
+
+        <div class="timeline-item timeline-item-left">
+          <h3 class="title is-4">Emergent Sea</h3>
+          <p class="has-text-grey-light">2021</p>
+          <p class="tags">
+            <span class="tag">LibGDX/Java</span>
+            <span class="tag">Team</span>
+            <span class="tag">Multiplayer</span>
+          </p>
+          <img class="box image mb-2 p-0" src="images/emergent_sea.png" alt="Emergent Sea">
+          <p>
+            Emergent-Sea is a turn-based single-player and multiplayer naval strategy game. You control a fleet of ships
+            on a limited map. Each ship is managed independently by performing actions (move, attack, fish, ...).
+          </p>
+          <a href="https://martinboue.itch.io/emergent-sea" class="button is-link is-small mt-2">Play</a>
+        </div>
+
+        <div class="timeline-item timeline-item-right">
+          <h3 class="title is-4">Leaning plates</h3>
+          <p class="has-text-grey-light">2020</p>
+          <p class="tags">
+            <span class="tag">Lua</span>
+            <span class="tag">Solo</span>
+            <span class="tag">LD46</span>
+          </p>
+          <img class="image box mb-2 p-0" src="images/leaning_plates.png" alt="Leaning plates">
+          <p>
+            For my first LD I am happy to present my arcade game: “Leaning plates”. The principle of the game is simple,
+            you must follow the three following rules:
+
+            Prevent the plates from breaking
+            Put them in the dishwasher, you’ll be well rewarded if you economize water!
+            Be careful you can’t carry more than 10 plates…
+          </p>
+          <a href="https://ldjam.com/events/ludum-dare/46/leaning-plates" class="button is-link is-small mt-2">Play</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-6">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2025 Thomas Le Goff.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
